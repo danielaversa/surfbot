@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surfbot - Matrícule-se já na melhor escola de surf da Praia Mansa</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Alice&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <a href="index.html"><img class="logo" src="surfbot.svg" alt="Surfbot Logo"></a>
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#">Praia</a></li>
+        <li><a href="#">Aulas</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="#">Matricule-se</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- SIGN UP FORM -->
+  <section class="signup">
+    <div class="page-title">
+      <h2>Matricule-se</h2>
+    </div>
+    <div class="signup-form">
+      <!-- FORM  - This form is only a front end implementation, not meant to be used for real payments and therefore, not safe. It does not save or send data anywhere. -->
+      <form action="">
+        <!-- PERSONAL INFO -->
+        <label for="name">Nome</label>
+        <input type="text" id="name">
+        <label for="email">Email</label>
+        <input type="email" id="email">
+        <label for="cpf">CPF</label>
+        <input type="text" name="cpf" id="cpf" placeholder="111.111.111-11">
+        <label for="adress">Endereço</label>
+        <input type="text" name="address" id="address" placeholder="Rua, Número e Bairro">
+        <label for="state">Estado</label>
+        <select id="state" name="state">
+          <option value="AC">Acre</option>
+          <option value="AL">Alagoas</option>
+          <option value="AP">Amapá</option>
+          <option value="AM">Amazonas</option>
+          <option value="BA">Bahia</option>
+          <option value="CE">Ceará</option>
+          <option value="DF">Distrito Federal</option>
+          <option value="ES">Espírito Santo</option>
+          <option value="GO">Goiás</option>
+          <option value="MA">Maranhão</option>
+          <option value="MT">Mato Grosso</option>
+          <option value="MS">Mato Grosso do Sul</option>
+          <option value="MG">Minas Gerais</option>
+          <option value="PA">Pará</option>
+          <option value="PB">Paraíba</option>
+          <option value="PR">Paraná</option>
+          <option value="PE">Pernambuco</option>
+          <option value="PI">Piauí</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="RN">Rio Grande do Norte</option>
+          <option value="RS">Rio Grande do Sul</option>
+          <option value="RO">Rondônia</option>
+          <option value="RR">Roraima</option>
+          <option value="SC">Santa Catarina</option>
+          <option value="SP">São Paulo</option>
+          <option value="SE">Sergipe</option>
+          <option value="TO">Tocantins</option>
+        </select>
+        <!-- PAYMENT -->
+        <div class="payment-method">
+          <input type="radio" name="method" id="card" value="card" checked>
+          <label for="method">Cartão de Crédito ou Débito</label>
+          <input type="radio" name="method" id="invoice" value="invoice">
+          <label for="method">Boleto Bancário</label>
+        </div>
+        <div class="card-details">
+          <label for="card-name">Nome no Cartão</label>
+          <input type="text" name="card-name" placeholder="Nome como no cartão" required>
+          <label for="card-expiry">Data de Validade</label>
+          <select name="card-month" id="card-month"> 
+            <option value="MM">MM</option>
+            <option value="01">01</option>
+            <option value="02">02</option>
+            <option value="03">03</option>
+            <option value="04">04</option>
+            <option value="05">05</option>
+            <option value="06">06</option>
+            <option value="07">07</option>
+            <option value="08">08</option>
+            <option value="09">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+          <select name="card-year" id="card-year">
+            <option value="YY">YY</option>
+            <option value="2021">21</option>
+            <option value="2022">22</option>
+            <option value="2023">23</option>
+            <option value="2024">24</option>
+            <option value="2025">25</option>
+            <option value="2026">26</option>
+            <option value="2027">27</option>
+            <option value="2028">28</option>
+            <option value="2029">29</option>
+            <option value="2030">30</option>
+          </select>
+          <label for="card-number">Número do Cartão</label>
+          <input type="text" name="card-number" placeholder="XXXX-XXXX-XXXX-XXXX" required>
+          <label for="cvv">Código de Segurança</label>
+          <input type="text" name="cvv" id="cvv" placeholder="XXX" required>
+        </div>
+      </div>
+      <div class="chosen-plan">
+        <div class="chosen-plan-radio">
+          <input type="radio" name="plan" id="kid" value="kid" checked>
+          <label for="method">Cartão de Crédito ou Débito</label>
+          <input type="radio" name="plan" id="adult" value="adult">
+          <label for="method">Boleto Bancário</label>
+          <input type="radio" name="plan" id="pro" value="pro">
+          <label for="method">Boleto Bancário</label>
+        </div>
+        <div class="plan-details plan-kid plan-active">
+          <img src="icones/surfbot-icon.svg" alt="Dificuldade">
+          <h3>Infantil</h3>
+          <ul>
+            <li>Público entre 5 e 15 anos</li>
+            <li>Equipamentos fornecidos</li>
+            <li>Horários de Sex. à Sab.</li>
+            <li>2 horas seguidas de aula</li>
+          </ul>
+          <p>R$ 49,00 / Aula</p>
+        </div>
+        <div class="plan-details plan-adult">
+          <img src="icones/surfbot-icon.svg" alt="Dificuldade">
+          <img src="icones/surfbot-icon.svg" alt="Dificuldade">
+          <h3>Adulto</h3>
+          <ul>
+            <li>Público entre 16 e 80 anos</li>
+            <li>Equipamentos fornecidos</li>
+            <li>Horários de Sex. à Sab.</li>
+            <li>3 horas seguidas de aula</li>
+          </ul>
+          <p>R$ 69,00 / Aula</p>
+        </div>
+        <div class="plan-details plan-pro">
+          <img src="icones/surfbot-icon.svg" alt="Dificuldade">
+          <img src="icones/surfbot-icon.svg" alt="Dificuldade">
+          <img src="icones/surfbot-icon.svg" alt="Dificuldade">
+          <h3>Profissional</h3>
+          <ul>
+            <li>Experiência de 3 anos no surf</li>
+            <li>Você deve trazer o equipamento</li>
+            <li>Horários de Sex. à Sab.</li>
+            <li>4 horas seguidas de aula</li>
+          </ul>
+          <p>R$ 99,00 / Aula</p>
+        </div>
+      </div>
+        <!-- SUBMIT -->
+        <p class="confirmation-msg">Seu cartão será debitado em R$ <span class="confirmation-price">0,00</span>.</p>
+        <button type="submit">Realizar Matrícula</button>
+        <p>Informações seguras e criptografadas</p>
+      </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Surfbot - Code by <a href="https://daniaversa.dev">Dani Aversa</a> in 2021 during courses by <a href="https://origamid.com">Origamid</a>.</p>
+    <img src="icones/surfbot-icon.svg" alt="Surfbot">
+  </footer>
+</body>
+</html>
