@@ -1,0 +1,839 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+p,
+h1,
+ul,
+li,
+blockquote {
+  padding: 0;
+  margin: 0;
+}
+
+body,
+button {
+  font-family: "Nunito", Helvetica, Arial, sans-serif;
+  font-size: 1.125rem;
+}
+
+h1,
+h2 {
+  font-family: "Alice", Georgia, serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+/* LAYOUT */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* SUPERINFO */
+.superinfo {
+  background: #1188ee;
+}
+
+.superinfo p {
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: bold;
+  padding: 8px 0;
+}
+
+/* HEADER */
+.header {
+  background: #17222d;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 11px;
+}
+
+.logo {
+  height: 45px;
+  width: auto;
+}
+
+.main-nav ul {
+  height: 45px;
+  display: flex;
+  align-items: center;
+}
+
+.main-nav ul li + li {
+  margin-left: 15px;
+}
+
+.main-nav ul li + li::before {
+  margin-right: 15px;
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.main-nav a {
+  color: #fff;
+}
+
+.main-nav a.current-page {
+  border-bottom: 2px solid #eff4f9;
+}
+
+.main-nav a:hover {
+  border-bottom: 2px solid #ee2211;
+}
+
+/* HERO */
+
+.hero {
+  background: url(../fotos/seth-doyle-151914.jpg);
+  background-size: cover;
+  background-position: center 60%;
+}
+
+.hero .container {
+  padding: 285px 0 60px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.hero h1 {
+  font-size: 5rem;
+  color: #fff;
+  font-weight: 400;
+}
+
+.hero-form {
+  height: 92px;
+  width: 520px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-form input {
+  color: #fff;
+  width: 335px;
+  height: 40px;
+  border: 0px;
+  border-radius: 5px 0 0 5px;
+  padding-left: 15px;
+}
+
+.hero-form button {
+  text-transform: uppercase;
+  text-align: left;
+  font-weight: bold;
+  color: #fff;
+  width: 185px;
+  height: 42px;
+  border: 0px;
+  padding-left: 15px;
+  border-radius: 0 5px 5px 0;
+  background-color: #ee2211;
+  background-image: url(../icones/seta.svg);
+  background-position: 95% 50%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+/* ABOUT */
+
+.about {
+  padding: 60px 0;
+  display: flex;
+}
+
+.about-where {
+  width: 570px;
+}
+
+.about-info {
+  width: 520px;
+  margin-left: 130px;
+}
+
+.about-info p {
+  padding-top: 30px;
+  line-height: 163%;
+}
+
+.about-photo {
+  width: 100%;
+  height: 671px;
+  content: "";
+  background: url(../fotos/abigail-lynn-316133.jpg);
+  background-size: cover;
+  background-position: 0%;
+}
+
+.about-map {
+  background: url(../fotos/mapa.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  top: 566px;
+  height: 240px;
+  margin: 0 auto;
+  width: 481px;
+}
+
+.about h2 {
+  font-size: 5rem;
+  line-height: 5.13rem;
+  font-weight: 400;
+  margin: 0 0 60px;
+}
+
+.about h2 strong {
+  color: #1188ee;
+  font-weight: 400;
+}
+
+.about h3 {
+  margin: 175px 0 6px;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+.about h3::before {
+  display: inline-block;
+  content: "";
+  height: 4px;
+  width: 4px;
+  border: 2px solid #ee2211;
+  border-radius: 50%;
+  margin: 0 6px 1.515px 0;
+}
+
+.about-transport li {
+  color: #99aabb;
+  font-weight: bold;
+  font-size: 0.875rem;
+  line-height: 1.875rem;
+}
+
+.about-transport li span {
+  color: #17222d;
+}
+
+.about-transport li::before {
+  display: inline-block;
+  content: "";
+  width: 10px;
+  height: 2px;
+  background: #1188ee;
+  margin: 0 6px 5px 0;
+}
+
+.features li {
+  border-top: 2px solid #eff4f9;
+  border-bottom: 2px solid #eff4f9;
+  display: flex;
+  align-items: center;
+}
+
+.features li + li {
+  border-top: 0;
+}
+
+.features img {
+  height: 50px;
+  width: 50px;
+  margin: 33px 33px 33px 0;
+}
+
+.features p {
+  font-size: 1.5rem;
+  color: #445566;
+  padding-top: 0;
+}
+
+/* PLANS */
+
+.plans {
+  background: #eff4f9;
+}
+
+.plan-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.waves {
+  width: 174px;
+  margin: 0 auto;
+  position: relative;
+  top: -25px;
+}
+
+.plans h2 {
+  text-align: center;
+  font-size: 5rem;
+  line-height: 5.13rem;
+  font-weight: 400;
+  margin: 5px 0 60px;
+}
+
+.plan {
+  width: 370px;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.dificuldade {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -20px;
+}
+
+.dificuldade img {
+  width: 21.02px;
+  height: 37.29px;
+}
+
+.plan-container {
+  width: 261px;
+  margin: 0 auto;
+}
+
+.plan h3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin: 0 0 30px;
+}
+
+.plan ul {
+  border-top: 2px solid #eff4f9;
+  border-bottom: 2px solid #eff4f9;
+  padding: 30px 25px 30px 20px;
+}
+
+.plan ul li {
+  line-height: 245%;
+  font-size: 0.875rem;
+}
+
+.plan ul li::before {
+  display: inline-block;
+  content: "";
+  height: 4px;
+  width: 4px;
+  border: 2px solid #ee2211;
+  border-radius: 50%;
+  margin: 0 6px 1.515px 0;
+}
+
+.plan p {
+  font-size: 0.875rem;
+  color: #1188ee;
+  font-weight: bold;
+  margin: 15px 35px;
+}
+
+.plan button {
+  width: 100%;
+  border: 0;
+  background-color: #445566;
+  background-image: url(../icones/seta.svg);
+  background-position: 95% 50%;
+  background-repeat: no-repeat;
+  color: #fff;
+  border-radius: 5px;
+  margin: 15px 0 30px;
+  padding: 7.5px 15px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: left;
+  cursor: pointer;
+}
+
+.plan-groups {
+  padding: 30px 0 60px;
+  text-align: center;
+}
+
+.highlight-red {
+  color: #ee2211;
+  font-weight: bold;
+}
+
+.highlight-underline {
+  border-bottom: 2px solid #ee2211;
+}
+
+/* QUOTE */
+
+.quote {
+  padding: 140px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../fotos/adam-krowitz-386792.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote blockquote {
+  font-size: 5rem;
+  line-height: 103%;
+  font-family: "Alice", Georgia, serif;
+  color: #fff;
+  max-width: 720px;
+}
+
+.quote cite {
+  display: block;
+  margin: auto;
+  font-weight: bold;
+  color: #fff;
+  padding-top: 30px;
+  text-align: center;
+  font-style: normal;
+}
+
+/* CONTACT */
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact h2 {
+  width: 100%;
+  font-size: 5rem;
+  text-align: center;
+}
+
+.contact-form {
+  padding-right: 114px;
+  border-right: 2px solid #eff4f9;
+  margin-bottom: 60px;
+}
+
+.contact-form label,
+.contact-form input,
+.contact-form button,
+.contact-form textarea {
+  display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 470px;
+  background: #eff4f9;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px 0px #bbccdd66;
+  margin-bottom: 15px;
+  padding-left: 15px;
+  font-size: 1.125rem;
+  font-family: "Nunito", Helvetica, Arial, sans-serif;
+}
+
+.contact-form label {
+  padding-bottom: 3px;
+  font-weight: bold;
+  color: #445566;
+}
+
+.contact-form input {
+  height: 50px;
+}
+
+.contact-form textarea {
+  height: 180px;
+  resize: none;
+  padding-top: 15px;
+}
+
+.contact-form button {
+  width: 245px;
+  border: 0;
+  background-color: #445566;
+  background-image: url(../icones/seta.svg);
+  background-position: 95% 50%;
+  background-repeat: no-repeat;
+  color: #fff;
+  border-radius: 5px;
+  margin: 30px 0;
+  padding: 7.5px 15px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: left;
+  cursor: pointer;
+}
+
+.contact-info {
+  padding-left: 114px;
+}
+
+.contact-info h3,
+.contact-info a {
+  font-weight: bold;
+  line-height: 1.5625rem;
+}
+
+.contact-info a {
+  color: #445566;
+  display: block;
+  text-transform: uppercase;
+  padding-top: 10px;
+}
+
+.contact-info a img {
+  display: inline-block;
+  width: 12px;
+}
+
+.times::before {
+  display: inline-block;
+  content: "";
+  height: 5px;
+  width: 5px;
+  border: 2px solid #16c70b;
+  border-radius: 50%;
+  margin: 0 6px 1.515px 0;
+}
+
+/* FOOTER */
+
+footer {
+  background: #1188ee;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer p {
+  padding: 45px 0;
+  color: #fff;
+}
+
+footer a {
+  font-weight: bold;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+footer a:hover {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+footer img {
+  height: 37.29px;
+  width: 21.02px;
+}
+
+/* SIGN UP PAGE */
+
+.page-title h2 {
+  width: 100%;
+  background: #eff4f9;
+  font-size: 5rem;
+  text-align: center;
+  margin: 0;
+  padding: 30px 0;
+}
+
+.signup-form {
+  padding: 60px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.signup-form label,
+.signup-form input,
+.signup-form button,
+.signup-form textarea {
+  display: block;
+}
+
+.signup-form input,
+.signup-form textarea,
+.signup-form select {
+  width: 100%;
+  background: #eff4f9;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px 0px #bbccdd66;
+  margin-bottom: 20px;
+  padding-left: 15px;
+  font-size: 1.125rem;
+  font-family: "Nunito", Helvetica, Arial, sans-serif;
+}
+
+.signup-form label {
+  padding-bottom: 3px;
+  font-weight: bold;
+  color: #445566;
+}
+
+.signup-form input {
+  height: 48px;
+}
+
+.signup-form select {
+  height: 50px;
+}
+
+.signup-form textarea {
+  height: 180px;
+  resize: none;
+  padding-top: 15px;
+}
+
+.signup-form button {
+  width: 245px;
+  border: 0;
+  background-color: #445566;
+  background-image: url(../icones/seta.svg);
+  background-position: 95% 50%;
+  background-repeat: no-repeat;
+  color: #fff;
+  border-radius: 5px;
+  margin: 30px 0;
+  padding: 7.5px 15px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: left;
+  cursor: pointer;
+}
+
+.signup-form select {
+  width: 270px;
+}
+
+.signup-form .signup-address,
+.signup-form .signup-cep {
+  width: 253px;
+}
+
+.left {
+  width: 570px;
+  margin-right: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.right {
+  background: blue;
+  width: 430px;
+}
+
+.short-label,
+.half {
+  width: calc(50%-30px);
+}
+
+.signup-form input[type="radio"] {
+  width: auto;
+  height: auto;
+  display: inline;
+}
+
+.signup-form h3 {
+  width: 100%;
+  color: #1188ee;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #eff4f9;
+}
+
+.payment-method {
+  width: 100%;
+  padding: 0;
+  background: #eff4f9;
+  border-radius: 5px;
+  margin: 10px 0 30px;
+}
+
+.cardside {
+  display: inline-block;
+  background: #bbccdd;
+  padding: 25px 15px 10px;
+  border-radius: 5px 0 0 5px;
+}
+
+.invoiceside {
+  display: inline-block;
+  padding: 25px 15px 10px;
+  width: 244px;
+  border-radius: 0 5px 5px 0;
+}
+
+.payment-method label {
+  display: inline;
+  padding: 0;
+}
+
+.card-details,
+.card-expiry {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card-details {
+  padding-bottom: 30px;
+  border-bottom: 2px solid #eff4f9;
+}
+
+.card-details .half {
+  width: calc(50% - 15px);
+}
+
+.card-details input {
+  width: 100%;
+}
+
+.card-details .card-month,
+.card-details .card-year {
+  width: calc(50% - 10px);
+  display: inline-block;
+}
+
+.chosen-plan {
+  background: #eff4f9;
+  padding-bottom: 20px;
+}
+
+.chosen-plan p {
+  display: inline-block;
+  padding: 30px;
+  font-weight: bold;
+}
+
+.chosen-plan-radio {
+  display: flex;
+  background: #fff;
+  border-radius: 5px;
+  margin: 0 30px;
+}
+
+.chosen-plan-radio-option {
+  display: flex;
+  width: calc(33% - 10px);
+  padding: 10px;
+}
+
+.chosen-plan-radio-option input[type="radio"] {
+  display: block;
+  margin: 5px;
+}
+
+.chosen-plan-radio-option.active {
+  background: #bbccdd;
+}
+
+.chosen-plan-radio-option:first-of-type {
+  border-radius: 5px 0 0 5px;
+}
+
+.chosen-plan-radio-option:last-of-type {
+  border-radius: 0 5px 5px 0;
+}
+
+.chosen-plan-details {
+  display: none;
+  background: #fff;
+  margin: 35px 30px;
+}
+
+.chosen-plan-details.plan-active {
+  display: block;
+}
+
+.chosen-plan-details h3 {
+  width: 80%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #445566;
+  padding-bottom: 25px;
+  margin: 0 auto 30px;
+}
+
+.chosen-plan ul {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #eff4f9;
+}
+
+.chosen-plan-details ul li {
+  padding-left: 30px;
+  line-height: 2.8125rem;
+}
+
+.chosen-plan-details ul li::before {
+  display: inline-block;
+  content: "";
+  height: 5px;
+  width: 5px;
+  border: 2px solid #ee2211;
+  border-radius: 50%;
+  margin: 0 6px 1.515px 0;
+}
+
+.chosen-plan-details p {
+  margin-left: 39px;
+  color: #1188ee;
+}
+
+.confirm {
+  width: 100%;
+  padding: 30px 0;
+}
+
+.confirm button {
+  width: auto;
+  text-align: center;
+  padding: 15px 30px;
+  background-image: none;
+}
+
+.confirm p {
+  display: inline;
+  padding-left: 10px;
+}
+
+.confirm img {
+  width: 15px;
+  display: inline;
+}

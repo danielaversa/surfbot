@@ -45,10 +45,11 @@
   </section>
 
   <!-- ABOUT -->
-  <section class="about container">    
+  <section class="about container" id="about">    
     <div class="about-where">
-      <div class="about-photo"></div>
+      <div class="about-photo">
         <div class="about-map"></div>
+      </div>
         <h3>Como Chegar</h3>
         <ul class="about-transport">
           <li><span>Carro</span> pela via Lúcio Costa sentido Barra</li>
@@ -60,15 +61,15 @@
         <h2><strong>Aulas</strong> em uma das melhores praias do <strong>Rio</strong>.</h2>
         <ul class="features">
           <li>
-            <img src="icones/noun_1037159.svg" alt="Chinelos" class="features-icon">
+            <img src="icones/sandalhas.svg" alt="Chinelos" class="features-icon">
             <p>8km de costa</p>
           </li>
           <li>
-            <img src="icones/noun_1037157.svg" alt="Água de Coco" class="features-icon">
+            <img src="icones/coco.svg" alt="Água de Coco" class="features-icon">
             <p>Restaurantes à beira mar</p>
           </li>
           <li>
-            <img src="icones/noun_1037169.svg" alt="Bóia Salva-vidas" class="features-icon">
+            <img src="icones/boia.svg" alt="Bóia Salva-vidas" class="features-icon">
             <p>Salva-vidas a cada 300m</p>
           </li>
         </ul>
@@ -78,51 +79,70 @@
   </section>
 
   <!-- PLANS -->
-  <section class="plans container">
-    <img src="icones/ondas.svg" alt="Ondas do Mar">
+  <section class="plans">
+    <div class="container">
+      <img class="waves" src="icones/ondas.svg" alt="Ondas do Mar">
     <h2>Aulas</h2>
-    <div class="plan">
-      <img src="icones/surfbot-icon.svg" alt="Dificuldade">
-      <h3>Infantil</h3>
-      <ul>
-        <li>Público entre 5 e 15 anos</li>
-        <li>Equipamentos fornecidos</li>
-        <li>Horários de Sex. à Sab.</li>
-        <li>2 horas seguidas de aula</li>
-      </ul>
-      <p>R$ 49,00 / Aula</p>
-      <button>Matricule-se</button>
+    <div class="plan-details">
+      <div class="plan">
+        <div class="dificuldade">
+          <img src="icones/surfbot-icon.svg" alt="Dificuldade">
+        </div>
+        <h3>Infantil</h3>
+        <div class="plan-container">
+          <ul>
+            <li>Público entre 5 e 15 anos</li>
+            <li>Equipamentos fornecidos</li>
+            <li>Horários de Sex. à Sab.</li>
+            <li>2 horas seguidas de aula</li>
+          </ul>
+          <p>R$ 49,00 / Aula</p>
+          <button>Matricule-se</button>
+        </div>
+      </div>
+      <div class="plan">
+        <div class="dificuldade">
+          <img src="icones/surfbot-icon.svg" alt="Dificuldade">
+          <img src="icones/surfbot-icon.svg" alt="Dificuldade">
+        </div>
+        <h3>Adulto</h3>
+        <div class="plan-container">
+          <ul>
+            <li>Público entre 16 e 80 anos</li>
+            <li>Equipamentos fornecidos</li>
+            <li>Horários de Sex. à Sab.</li>
+            <li>3 horas seguidas de aula</li>
+          </ul>
+          <p>R$ 69,00 / Aula</p>
+          <button>Matricule-se</button>
+        </div>
+        
+      </div>
+      <div class="plan">
+        <div class="dificuldade">
+          <img src="icones/surfbot-icon.svg" alt="Dificuldade">
+          <img src="icones/surfbot-icon.svg" alt="Dificuldade">
+          <img src="icones/surfbot-icon.svg" alt="Dificuldade">
+        </div>
+        <h3>Profissional</h3>
+        <div class="plan-container">
+          <ul>
+            <li>Experiência de 3 anos no surf</li>
+            <li>Você deve trazer o equipamento</li>
+            <li>Horários de Sex. à Sab.</li>
+            <li>4 horas seguidas de aula</li>
+          </ul>
+          <p>R$ 99,00 / Aula</p>
+          <button>Matricule-se</button>
+        </div>
     </div>
-    <div class="plan">
-      <img src="icones/surfbot-icon.svg" alt="Dificuldade">
-      <img src="icones/surfbot-icon.svg" alt="Dificuldade">
-      <h3>Adulto</h3>
-      <ul>
-        <li>Público entre 16 e 80 anos</li>
-        <li>Equipamentos fornecidos</li>
-        <li>Horários de Sex. à Sab.</li>
-        <li>3 horas seguidas de aula</li>
-      </ul>
-      <p>R$ 69,00 / Aula</p>
-      <button>Matricule-se</button>
     </div>
-    <div class="plan">
-      <img src="icones/surfbot-icon.svg" alt="Dificuldade">
-      <img src="icones/surfbot-icon.svg" alt="Dificuldade">
-      <img src="icones/surfbot-icon.svg" alt="Dificuldade">
-      <h3>Profissional</h3>
-      <ul>
-        <li>Experiência de 3 anos no surf</li>
-        <li>Você deve trazer o equipamento</li>
-        <li>Horários de Sex. à Sab.</li>
-        <li>4 horas seguidas de aula</li>
-      </ul>
-      <p>R$ 99,00 / Aula</p>
-      <button>Matricule-se</button>
-    </div>
+      
+    
     <div class="plan-groups">
-      <p>Possui um grupo com mais de <span class="highlight-orange">3 pessoas</span>?</p>
-      <p>Entre <span class="highlight-underline"em contato</span> para um desconto personalizado.</p>
+      <p>Possui um grupo com mais de <span class="highlight-red">3 pessoas</span>?</p>
+      <p>Entre <span class="highlight-underline">em contato</span> para um desconto personalizado.</p>
+    </div>
     </div>
   </section>
 
@@ -149,18 +169,19 @@
       </form>
     </div>
     <div class="contact-info">
-      <h3></h3>
+      <h3>Endereço</h3>
       <ul class="address">
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>Praia Mansa nº 47,</li>
+        <li>Rio de Janeiro - RJ</li>
+        <li>Procure a barraca vermelha</li>
+        <li><a href="#about">Ver no mapa <img src="icones/seta-red.svg" alt="Seta"></a></li>
       </ul>
-      <h3></h3>
+      <h3>Email e Telefone</h3>
       <ul class="phone">
         <li>contato@surfbot.com</li>
         <li>21 99999-9999</li>
       </ul>
-      <h3>Horário</h3>
+      <h3 class="times">Horário</h3>
       <ul class="opening-times">
         <li>De Sexta à Sábado</li>
         <li>Das 06:00 às 14:00</li>
@@ -172,7 +193,7 @@
   <footer>
     <div class="container">
       <p>Surfbot - Code by <a href="https://daniaversa.dev">Dani Aversa</a> in 2021 during courses by <a href="https://origamid.com">Origamid</a>.</p>
-      <img src="icones/surfbot-icon.svg" alt="Surfbot">
+      <img src="icones/surfbot-icon-white.svg" alt="Surfbot">
     </div>
   </footer>
 </body>
