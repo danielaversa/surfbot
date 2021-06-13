@@ -16,11 +16,16 @@ body,
 button {
   font-family: "Nunito", Helvetica, Arial, sans-serif;
   font-size: 1.125rem;
+  box-shadow: 0px 2px 2px 0px #bbccdd66;
 }
 
 h1,
 h2 {
   font-family: "Alice", Georgia, serif;
+}
+
+h2 {
+  font-size: 3rem;
 }
 
 li {
@@ -41,6 +46,28 @@ img {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 1250px) {
+  .container {
+    max-width: 769px;
+  }
+  body,
+  button {
+    font-size: 0.875rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    max-width: 600px;
+  }
+}
+
+@media only screen and (max-width: 651px) {
+  .container {
+    max-width: 300px;
+  }
 }
 
 /* SUPERINFO */
@@ -69,6 +96,10 @@ img {
 .logo {
   height: 45px;
   width: auto;
+}
+
+.main-nav {
+  overflow: hidden;
 }
 
 .main-nav ul {
@@ -103,6 +134,70 @@ img {
   border-bottom: 2px solid #ee2211;
 }
 
+.main-nav i {
+  display: none;
+}
+
+@media only screen and (max-width: 651px) {
+  .main-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .main-nav i {
+    display: block;
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+
+  .main-nav .icon {
+    transition: 0.3s;
+    border-radius: 5px;
+  }
+
+  .main-nav .icon:hover {
+    border: 0;
+    background: #1188ee;
+  }
+
+  .main-nav .links {
+    /* display: none; */
+    opacity: 0;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    top: -76px;
+    left: 0;
+    background: #445566;
+    box-shadow: 0px 2px 2px 0px #17222d;
+    transition: 0.3s;
+  }
+
+  .main-nav .links.nav-open {
+    transform: translate(0, 197px);
+    opacity: 1;
+  }
+
+  .main-nav ul li {
+    text-align: center;
+    width: 22%;
+  }
+
+  .main-nav ul li + li {
+    margin-left: 0;
+    border-left: 2px solid #eff4f9;
+    padding: 0;
+  }
+
+  .main-nav ul li + li::before {
+    display: none;
+  }
+
+  .main-nav ul li a {
+    padding: 15px 10px 5px;
+  }
+}
+
 /* HERO */
 
 .hero {
@@ -126,18 +221,20 @@ img {
 
 .hero-form {
   height: 92px;
-  width: 520px;
+  min-width: 450px;
+  max-width: 520px;
   display: flex;
   align-items: center;
 }
 
 .hero-form input {
   color: #fff;
-  width: 335px;
+  width: calc(100% - 185px);
   height: 40px;
   border: 0px;
   border-radius: 5px 0 0 5px;
   padding-left: 15px;
+  box-shadow: 0px 2px 2px 0px #17222d;
 }
 
 .hero-form button {
@@ -146,7 +243,7 @@ img {
   font-weight: bold;
   color: #fff;
   width: 185px;
-  height: 42px;
+  height: 40px;
   border: 0px;
   padding-left: 15px;
   border-radius: 0 5px 5px 0;
@@ -155,8 +252,64 @@ img {
   background-position: 95% 50%;
   background-repeat: no-repeat;
   cursor: pointer;
+  box-shadow: 0px 2px 2px 0px #17222d;
 }
 
+.hero-form button:hover {
+  background-color: #17222d;
+}
+
+@media only screen and (max-width: 1200px) {
+  .hero-form {
+    min-width: 350px;
+    margin-left: 20px;
+  }
+
+  .hero-form input {
+    width: calc(100% - 150px);
+  }
+
+  .hero-form button {
+    width: 150px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .hero .container {
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-top: 30px;
+    min-height: 480px;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+    align-self: flex-start;
+  }
+
+  .hero-form {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0;
+    min-width: 0;
+    margin-top: 30px;
+  }
+
+  .hero-form input {
+    width: 300px;
+  }
+
+  .hero-form button {
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 651px) {
+  .hero-form button,
+  .hero-form input {
+    border-radius: 5px;
+  }
+}
 /* ABOUT */
 
 .about {
@@ -269,6 +422,65 @@ img {
   padding-top: 0;
 }
 
+@media only screen and (max-width: 1250px) {
+  .about {
+    padding-bottom: 85px;
+  }
+  .about-where {
+    width: 47%;
+    margin-right: 6%;
+  }
+
+  .about-map {
+    width: 90%;
+    height: 20%;
+  }
+
+  .about-info {
+    width: 47%;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .about {
+    flex-wrap: wrap;
+  }
+  .about-where {
+    min-width: 300px;
+    width: 100%;
+    margin-right: 6%;
+    margin: 0 auto;
+  }
+
+  .about-photo {
+    height: 300px;
+  }
+
+  .about-map {
+    top: 245px;
+    height: 150px;
+  }
+
+  .about-where h3 {
+    margin-top: 120px;
+  }
+
+  .about-info {
+    width: 100%;
+  }
+
+  .about-info h2 {
+    margin: 30px 0;
+    font-size: 3rem;
+    line-height: 3.4rem;
+  }
+
+  .about-info p {
+    font-size: 0.875rem;
+  }
+}
+
 /* PLANS */
 
 .plans {
@@ -299,6 +511,7 @@ img {
   width: 370px;
   background: #fff;
   border-radius: 5px;
+  box-shadow: 0px 2px 2px 0px #bbccdd66;
 }
 
 .dificuldade {
@@ -364,11 +577,14 @@ img {
   border-radius: 5px;
   margin: 15px 0 30px;
   padding: 7.5px 15px;
-  font-size: 1.25rem;
   font-weight: bold;
   text-transform: uppercase;
   text-align: left;
   cursor: pointer;
+}
+
+.plan button:hover {
+  background-color: #1188ee;
 }
 
 .plan-groups {
@@ -385,10 +601,60 @@ img {
   border-bottom: 2px solid #ee2211;
 }
 
+@media only screen and (max-width: 1250px) {
+  .plan-container {
+    width: 100%;
+    padding: 15px 30px 30px;
+  }
+
+  .plan {
+    width: 30%;
+  }
+
+  .plan h3 {
+    margin-bottom: 0;
+  }
+
+  .plan ul,
+  .plan p {
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .plan button {
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .plans h2 {
+    font-size: 3rem;
+    line-height: 3.4rem;
+  }
+  .plan-details {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .plan {
+    width: 45%;
+  }
+  .plan:not(:last-child) {
+    margin-bottom: 55px;
+  }
+}
+
+@media only screen and (max-width: 651px) {
+  .plan {
+    width: 100%;
+  }
+}
 /* QUOTE */
 
 .quote {
-  padding: 140px;
+  padding: 140px 0;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url(../fotos/adam-krowitz-386792.jpg);
   background-size: cover;
@@ -417,6 +683,21 @@ img {
   font-style: normal;
 }
 
+@media only screen and (max-width: 800px) {
+  .quote {
+    padding: 120px 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../fotos/adam-krowitz-386792.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .quote blockquote {
+    font-size: 3rem;
+    line-height: 3.4rem;
+  }
+}
+
 /* CONTACT */
 
 .contact {
@@ -443,6 +724,10 @@ img {
   display: block;
 }
 
+.contact-form button:hover {
+  background-color: #1188ee;
+}
+
 .contact-form input,
 .contact-form textarea {
   width: 470px;
@@ -451,7 +736,7 @@ img {
   border-radius: 5px;
   box-shadow: 0px 2px 2px 0px #bbccdd66;
   margin-bottom: 15px;
-  padding-left: 15px;
+  padding: 15px;
   font-size: 1.125rem;
   font-family: "Nunito", Helvetica, Arial, sans-serif;
 }
@@ -469,7 +754,6 @@ img {
 .contact-form textarea {
   height: 180px;
   resize: none;
-  padding-top: 15px;
 }
 
 .contact-form button {
@@ -522,6 +806,36 @@ img {
   margin: 0 6px 1.515px 0;
 }
 
+@media only screen and (max-width: 1250px) {
+  .contact-form {
+    margin: 0 auto;
+    padding-right: 0;
+    border: 0;
+  }
+
+  .contact-info {
+    width: 470px;
+    padding-left: 0;
+    margin: 0 auto 60px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .contact h2 {
+    font-size: 4rem;
+    line-height: 4.2rem;
+  }
+}
+
+@media only screen and (max-width: 651px) {
+  .contact-form input,
+  .contact-form textarea {
+    min-width: 300px;
+    max-width: 100%;
+    width: auto;
+  }
+}
+
 /* FOOTER */
 
 footer {
@@ -536,6 +850,7 @@ footer .container {
 
 footer p {
   padding: 45px 0;
+  line-height: 250%;
   color: #fff;
 }
 
@@ -580,6 +895,10 @@ footer img {
 .signup-form button,
 .signup-form textarea {
   display: block;
+}
+
+.signup-form button:hover {
+  background-color: #1188ee;
 }
 
 .signup-form input,
@@ -653,7 +972,6 @@ footer img {
 }
 
 .right {
-  background: blue;
   width: 430px;
 }
 
@@ -681,6 +999,7 @@ footer img {
   background: #eff4f9;
   border-radius: 5px;
   margin: 10px 0 30px;
+  box-shadow: 0px 2px 2px 0px #bbccdd66;
 }
 
 .cardside {
@@ -688,12 +1007,13 @@ footer img {
   background: #bbccdd;
   padding: 25px 15px 10px;
   border-radius: 5px 0 0 5px;
+  width: 52%;
 }
 
 .invoiceside {
   display: inline-block;
   padding: 25px 15px 10px;
-  width: 244px;
+  width: 47%;
   border-radius: 0 5px 5px 0;
 }
 
@@ -732,6 +1052,8 @@ footer img {
 .chosen-plan {
   background: #eff4f9;
   padding-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px 0px #bbccdd66;
 }
 
 .chosen-plan p {
@@ -745,6 +1067,7 @@ footer img {
   background: #fff;
   border-radius: 5px;
   margin: 0 30px;
+  box-shadow: 0px 2px 2px 0px #bbccdd66;
 }
 
 .chosen-plan-radio-option {
@@ -774,6 +1097,8 @@ footer img {
   display: none;
   background: #fff;
   margin: 35px 30px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px 0px #bbccdd66;
 }
 
 .chosen-plan-details.plan-active {
@@ -836,4 +1161,71 @@ footer img {
 .confirm img {
   width: 15px;
   display: inline;
+}
+
+@media only screen and (max-width: 1250px) {
+  .left {
+    margin: 0 auto;
+  }
+
+  .right {
+    margin: 45px auto 0;
+    width: auto;
+  }
+
+  .confirm {
+    text-align: center;
+  }
+
+  .confirm button {
+    margin: 15px auto;
+  }
+}
+
+@media only screen and (max-width: 651px) {
+  .signup-form .signup-address,
+  .signup-form .signup-cep,
+  .signup-form select {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .half,
+  .short-label {
+    width: 300px;
+  }
+
+  .cardside {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .invoiceside {
+    width: 100%;
+    border-radius: 0 0 5px 5px;
+  }
+
+  .card-details .half {
+    width: 100%;
+  }
+
+  .chosen-plan {
+    max-width: 300px;
+  }
+
+  .chosen-plan-radio {
+    flex-wrap: wrap;
+  }
+
+  .chosen-plan-radio-option {
+    width: 240px;
+  }
+
+  .chosen-plan-radio-option:first-of-type {
+    border-radius: 5px 5px 0 0;
+  }
+
+  .chosen-plan-radio-option:last-of-type {
+    border-radius: 0 0 5px 5px;
+  }
 }
