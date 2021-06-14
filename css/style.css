@@ -180,7 +180,6 @@ img {
 
   .main-nav ul li {
     text-align: center;
-    width: 22%;
   }
 
   .main-nav ul li + li {
@@ -194,12 +193,30 @@ img {
   }
 
   .main-nav ul li a {
-    padding: 15px 10px 5px;
+    padding: 15px;
+  }
+}
+
+@media only screen and (max-width: 324px) {
+  .main-nav .links {
+    flex-direction: column;
+    justify-content: space-around;
+    height: 202px;
+  }
+
+  .main-nav ul li + li {
+    border-top: 2px solid #eff4f9;
+    border-left: 0;
+  }
+
+  .main-nav ul li a {
+    display: block;
+    padding: 15px;
+    width: 300px;
   }
 }
 
 /* HERO */
-
 .hero {
   background: url(../fotos/seth-doyle-151914.jpg);
   background-size: cover;
@@ -1183,6 +1200,11 @@ footer img {
 }
 
 @media only screen and (max-width: 651px) {
+  .page-title h2 {
+    font-size: 3rem;
+    line-height: 3.4rem;
+  }
+
   .signup-form .signup-address,
   .signup-form .signup-cep,
   .signup-form select {
