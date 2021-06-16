@@ -1078,8 +1078,13 @@ footer img {
 }
 
 .card-details {
+  display: flex;
   padding-bottom: 30px;
   border-bottom: 2px solid #eff4f9;
+}
+
+.card-details.hidden {
+  display: none;
 }
 
 .card-details .half {
