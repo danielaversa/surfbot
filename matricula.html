@@ -17,7 +17,7 @@
     <div class="container">
       <a href="index.html"><img class="logo" src="icones/surfbot-logo.svg" alt="Surfbot Logo"></a>
 
-      <nav class="main-nav">
+      <nav class="main-nav signup-nav">
         <ul id="links" class="links">
          <li><a href="#">Praia</a></li>
           <li><a href="#">Aulas</a></li>
@@ -92,14 +92,14 @@
         </div>
         <!-- PAYMENT -->
         <h3>Forma de Pagamento</h3>
-        <div class="payment-method">
-          <div class="cardside">
+        <div class="payment-method" id="payment-method">
+          <div class="cardside active" id="cardside">
             <input type="radio" name="method" id="card" value="card" checked>
-            <label for="method">Cartão de Crédito ou Débito</label>
+            <label for="card">Cartão de Crédito ou Débito</label>
           </div>
-          <div class="invoiceside">
+          <div class="invoiceside" id="invoiceside">
             <input type="radio" name="method" id="invoice" value="invoice">
-            <label for="method">Boleto Bancário</label>
+            <label for="invoice">Boleto Bancário</label>
           </div>
         </div>
         <div class="card-details">
@@ -153,17 +153,17 @@
       <div class="chosen-plan">
         <p>Escolha seu plano</p>
         <div class="chosen-plan-radio">
-          <div class="chosen-plan-radio-option active">
+          <div class="chosen-plan-radio-option active" id="kid-bg">
             <input type="radio" name="plan" id="kid" value="kid" checked>
-          <label for="plan">Infantil</label>
+          <label for="kid">Infantil</label>
           </div>
-          <div class="chosen-plan-radio-option">
+          <div class="chosen-plan-radio-option" id="adult-bg">
             <input type="radio" name="plan" id="adult" value="adult">
-            <label for="plan">Adulto</label>
+            <label for="adult">Adulto</label>
           </div>
-          <div class="chosen-plan-radio-option">
+          <div class="chosen-plan-radio-option" id="pro-bg">
             <input type="radio" name="plan" id="pro" value="pro">
-            <label for="plan">Profissional</label>
+            <label for="pro">Profissional</label>
           </div>
         </div>
         <div class="chosen-plan-details plan-kid plan-active">
