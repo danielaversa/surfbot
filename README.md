@@ -2,7 +2,7 @@
  A Wireframe to Front End Code Exercise.
  
  <p align="center">
-  <img src="https://raw.githubusercontent.com/danielaversa/surfbot/eaf305a132c5526e651ef13760bbac393416b1d1/icones/surfbot-logo-dark.svg" alt="Bikcraft Logo">
+  <img src="https://raw.githubusercontent.com/danielaversa/surfbot/4319534fa0bca9e4ab7ecba6a18c81daa00865d2/icones/surfbot-logo-dark.svg" alt="Bikcraft Logo">
 </p>
  
 # The Project
