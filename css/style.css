@@ -178,6 +178,11 @@ img {
     opacity: 1;
   }
 
+  .signup-nav .links.nav-open {
+    transform: translate(0, 143px);
+    opacity: 1;
+  }
+
   .main-nav ul li {
     text-align: center;
   }
@@ -193,7 +198,21 @@ img {
   }
 
   .main-nav ul li a {
-    padding: 15px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .main-nav ul li a:hover {
+    border-bottom: 0;
+    background: #1188ee;
+  }
+  .main-nav a.current-page {
+    border-bottom: 2px solid #eff4f9;
+  }
+
+  .main-nav a.current-page {
+    border-bottom: 0;
+    background: rgba(7, 53, 93, 0.5);
   }
 }
 
@@ -330,7 +349,7 @@ img {
 /* ABOUT */
 
 .about {
-  padding: 60px 0;
+  padding: 60px 0 85px;
   display: flex;
 }
 
@@ -1021,10 +1040,13 @@ footer img {
 
 .cardside {
   display: inline-block;
-  background: #bbccdd;
-  padding: 25px 15px 10px;
+  padding: 25px 0 10px 15px;
   border-radius: 5px 0 0 5px;
   width: 52%;
+}
+
+.payment-method .active {
+  background: #bbccdd;
 }
 
 .invoiceside {
@@ -1037,6 +1059,11 @@ footer img {
 .payment-method label {
   display: inline;
   padding: 0;
+}
+
+.cardside label,
+.invoiceside label {
+  padding: 15px 5px;
 }
 
 .card-details,
@@ -1088,8 +1115,8 @@ footer img {
 }
 
 .chosen-plan-radio-option {
+  flex-grow: 1;
   display: flex;
-  width: calc(33% - 10px);
   padding: 10px;
 }
 
