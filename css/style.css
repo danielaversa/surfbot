@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body,
 p,
 h1,
@@ -691,8 +695,7 @@ img {
 
 .quote {
   padding: 140px 0;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url(../fotos/adam-krowitz-386792.jpg);
+  background: url(../fotos/adam-krowitz-386792.jpg);
   background-size: cover;
   background-position: center;
   display: flex;
