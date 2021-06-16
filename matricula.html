@@ -154,19 +154,19 @@
         <p>Escolha seu plano</p>
         <div class="chosen-plan-radio">
           <div class="chosen-plan-radio-option active" id="kid-bg">
-            <input type="radio" name="plan" id="kid" value="kid" checked>
-          <label for="kid">Infantil</label>
+            <input type="radio" class="plan-input" name="plan" id="kid" value="kid" checked>
+          <label for="kid" class="plan-label">Infantil</label>
           </div>
           <div class="chosen-plan-radio-option" id="adult-bg">
-            <input type="radio" name="plan" id="adult" value="adult">
-            <label for="adult">Adulto</label>
+            <input type="radio" class="plan-input"  name="plan" id="adult" value="adult">
+            <label for="adult" class="plan-label">Adulto</label>
           </div>
           <div class="chosen-plan-radio-option" id="pro-bg">
-            <input type="radio" name="plan" id="pro" value="pro">
-            <label for="pro">Profissional</label>
+            <input type="radio" name="plan" class="plan-input" id="pro" value="pro">
+            <label for="pro" class="plan-label">Profissional</label>
           </div>
         </div>
-        <div class="chosen-plan-details plan-kid plan-active">
+        <div class="chosen-plan-details plan-kid plan-active"  id="plan-kid">
           <div class="dificuldade">
             <img src="icones/surfbot-icon.svg" alt="Dificuldade">
           </div>
@@ -179,7 +179,7 @@
             </ul>
             <p>R$ 49,00 / Aula</p>
         </div>
-        <div class="chosen-plan-details plan-adult">
+        <div class="chosen-plan-details plan-adult" id="plan-adult">
           <div class="dificuldade">
             <img src="icones/surfbot-icon.svg" alt="Dificuldade">
             <img src="icones/surfbot-icon.svg" alt="Dificuldade">
@@ -193,7 +193,7 @@
             </ul>
             <p>R$ 69,00 / Aula</p>
         </div>
-        <div class="chosen-plan-details plan-pro">
+        <div class="chosen-plan-details plan-pro" id="plan-pro">
           <div class="dificuldade">
             <img src="icones/surfbot-icon.svg" alt="Dificuldade">
             <img src="icones/surfbot-icon.svg" alt="Dificuldade">
@@ -212,7 +212,7 @@
         </div>
         <!-- CONFIRM AND SUBMIT -->
         <div class="confirm">
-          <p class="confirmation-msg">Seu cartão será debitado em R$ <span class="confirmation-price">0,00</span>.</p>
+          <p class="confirmation-msg">Seu cartão será debitado em R$ <span id="confirmation-price">0,00</span>.</p>
         <button type="submit">Realizar Matrícula</button>
         <img src="icones/cadeado.svg" alt="Transação segura"><p>Informações seguras e criptografadas</p>
         </div>

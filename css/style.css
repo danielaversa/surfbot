@@ -1138,15 +1138,21 @@ footer img {
 }
 
 .chosen-plan-details {
-  display: none;
+  visibility: hidden;
+  right: 100000px;
   background: #fff;
   margin: 35px 30px;
   border-radius: 5px;
   box-shadow: 0px 2px 2px 0px #bbccdd66;
+  transition: all 0.3s linear;
+  position: absolute;
+  opacity: 0;
 }
 
 .chosen-plan-details.plan-active {
-  display: block;
+  visibility: visible;
+  position: initial;
+  opacity: 1;
 }
 
 .chosen-plan-details h3 {
@@ -1268,6 +1274,7 @@ footer img {
 
   .chosen-plan-radio-option {
     width: 240px;
+    align-items: center;
   }
 
   .chosen-plan-radio-option:first-of-type {
@@ -1276,5 +1283,11 @@ footer img {
 
   .chosen-plan-radio-option:last-of-type {
     border-radius: 0 0 5px 5px;
+  }
+
+  .signup-form .plan-label,
+  .signup-form .plan-input {
+    padding: 15px;
+    display: block;
   }
 }
